@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Latihan 2 - Operator dan Fungsi</title>
+</head>
+<body>
+
+    <h2>Latihan 2 - Operator dan Fungsi</h2>
+
+    <p id="hasil1"></p>
+    <p id="hasil2"></p>
+
+    <script>
+        function hitungLuas(panjang, lebar) {
+            return panjang * lebar;
+        }
+
+        let luas1 = hitungLuas(5, 8);
+        let luas2 = hitungLuas(10, 3);
+
+        document.getElementById("hasil1").textContent =
+            "Luas persegi panjang (5 x 8): " + luas1;
+
+        document.getElementById("hasil2").textContent =
+            "Luas persegi panjang (10 x 3): " + luas2;
+
+        console.log("Luas pertama: " + luas1);
+        console.log("Luas kedua: " + luas2);
+    </script>
+
+</body>
+</html>

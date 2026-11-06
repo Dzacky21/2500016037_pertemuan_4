@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Studi Kasus - Kalkulator Sederhana</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f4f6f9;
+            padding: 40px 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .calc-card {
+            background-color: #ffffff;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+            width: 100%;
+            max-width: 360px;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+            color: #2c3e50;
+            font-size: 20px;
+            text-align: center;
+        }
+
+        .input-group {
+            margin-bottom: 12px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #333;
+            font-size: 14px;
+        }
+
+        input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 14px;
+            outline: none;
+            /* Menyembunyikan panah atas/bawah di Firefox */
+            -moz-appearance: textfield;
+        }
+
+        /* Menyembunyikan panah atas/bawah di Chrome, Safari, Edge, Opera */
+        input[type="number"]::-webkit-outer-spin-button,
+        input[type="number"]::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        input[type="number"]:focus {
+            border-color: #007bff;
+        }
+
+        .btn-group {
+            display: flex;
+            gap: 10px;
+            margin-top: 15px;
+            margin-bottom: 15px;
+        }
+
+        .btn-group button {
+            flex: 1;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .btn-group button:hover {
+            background-color: #0056b3;
+        }
+
+        #hasil {
+            padding: 12px;
+            background-color: #e9ecef;
+            border-radius: 4px;
+            font-weight: bold;
+            font-size: 16px;
+            text-align: center;
+            color: #2c3e50;
+            min-height: 45px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="calc-card">
+        <h2>Kalkulator Sederhana</h2>
+
+        <div class="input-group">
+            <label for="angka1">Angka Pertama:</label>
+            <input type="number" id="angka1" placeholder="Ketik angka di sini...">
+        </div>
+
+        <div class="input-group">
+            <label for="angka2">Angka Kedua:</label>
+            <input type="number" id="angka2" placeholder="Ketik angka di sini...">
+        </div>
+
+        <div class="btn-group">
+            <button onclick="hitung('+')">+</button>
+            <button onclick="hitung('-')">−</button>
+            <button onclick="hitung('*')">×</button>
+            <button onclick="hitung('/')">÷</button>
+        </div>
+
+        <div id="hasil">Hasil: -</div>
+    </div>
+
+    <script src="kalkulator.js"></script>
+</body>
+</html>
